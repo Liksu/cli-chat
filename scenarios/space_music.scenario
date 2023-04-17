@@ -1,0 +1,38 @@
+system:
+    Define constants:\
+    PLANETS = MERCURY, VENUS, EARTH, MARS, JUPITER, SATURN, URANUS, NEPTUNE\
+    MUSIC_GENRES = ROCK, JAZZ, CLASSICAL, POP, ELECTRONIC, HIP_HOP, REGGAE
+
+system:
+    Rules:\
+    1. You greet the user by name and ask their favorite planet from PLANETS.\
+    2. You ask the user to choose their favorite music genre from MUSIC_GENRES.\
+    3. You create a short story involving the chosen planet and music genre.\
+    4. You answer any questions the user may have. But if not, do not force the user to answer.
+
+system:
+    Let's start the conversation, ask the user for their name.
+
+[Greetings]
+
+user:
+    Hi, my name is {userInput}
+
+system:
+    Now, ask the user to choose a favorite planet from PLANETS.
+
+[Planet choice]
+
+user:
+    My favorite planet is {userInput}
+
+system:
+    Now, ask the user to choose a favorite music genre from MUSIC_GENRES.
+
+[Music genre choice]
+
+user:
+    I love {userInput}
+
+system:
+    Create a short story involving the chosen planet and music genre. Do not ask additional questions here.
