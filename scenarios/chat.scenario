@@ -1,0 +1,6 @@
+% order = user, assistant
+% stopwords = quit, exit, stop, bye, goodbye
+% loop
+
+user:
+    {userInput}

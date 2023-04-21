@@ -1,0 +1,103 @@
+% use join new_line
+% order = user, assistant
+% loop = Prompt
+% stopwords = quit, exit, stop, bye, goodbye, done
+% inputPlaceholder = request
+% startWith = default
+% prompt = Create me the prompt…
+
+output:
+    Here you can enter a propmt's requests and GPT will generate a prompts for the Midjourney.
+    To break the chat type one of these words: quit, exit, stop, bye, goodbye, done
+
+output:
+    
+
+system:
+    Today we are gonna create Images with a Diffusion model called Midjourney. Midjourney is an AI image generation tool that takes inputs through text prompts and parameters and uses a Machine Learning (ML) algorithm trained on a large amount of image data to produce unique images. Next, we will go over the basics of how to use Midjourney.
+
+system:
+    Model Version Parameters:
+    Midjourney routinely releases new model versions to improve efficiency, coherency, and quality. Different models excel at different types of images.
+    Niji: --niji An alternative model focused on anime style images.
+    High Definition: --hd Use an early alternative Model that produces larger, less consistent images. This algorithm may be suitable for abstract and landscape images.
+    Test: --test Use the Midjourney special test model.
+    Testp: --testp Use the Midjourney special photography-focused test model.
+    Version: --version <1, 2, 3, 4, or 5> or --v <1, 2, 3, 4, or 5> Use a different version of the Midjourney algorithm. The current algorithm (V4) is the default setting.
+
+system:
+    Newest Model:
+    The Midjourney V5 model is the newest and most advanced model. To use this model, add the --v 5 parameter to the end of a prompt.
+    This model has very high Coherency, excels at interpreting natural language prompts, is higher resolution, and supports advanced features like repeating patterns with --tile.
+    Niji Model:
+    The niji model tuned to produce anime and illustrative styles. The --niji model has vastly more knowledge of anime, anime styles, and anime aesthetics. It's excellent at dynamic and action shots and character-focused compositions in general.
+    prompt example: prompt vibrant California poppies --niji
+    Note: Niji does not support the --stylize parameter.
+    Newest Niji Model:
+    The Niji Version 5 model is the newest and most advanced Niji Model. To use this model, add the --niji 5 parameter to the end of a prompt.
+    This model is sensitive to the --stylize parameter. Experiment with different stylization ranges to fine-tune your images. Niji Model Version 5 can also be fine tuned with --style parameters to achieve unique looks. Try --style expressive, or --style cute.
+    Test Models:
+    Occasionally new models are released temporarily for community testing and feedback. There are currently two available test models: --test and --testp, which can be combined with the --creative parameter for more varied compositions.
+    A general-purpose artistic model with good coherency: --test
+    A photo-realism model with good coherency: --testp
+    prompt example: prompt vibrant California poppies --testp --creative
+    How to Switch Models:
+    Use the Version or Test Parameter: Add --v 1, --v 2, --v 3, --v 4, --v 4 --style 4a, --v4 --style 4b --test, --testp, --test --creative, --testp --creative or --niji to the end of your prompt.        
+
+system:
+    Basic Parameters:
+    Aspect Ratios: --aspect, or --ar Change the aspect ratio of a generation. An aspect ratio is the width-to-height ratio of an image. It is typically expressed as two numbers separated by a colon, such as 7:4 or 4:3.
+    Chaos: --chaos <number 0–100> Change how varied the results will be. Higher values produce more unusual and unexpected generations. The --chaos or --c parameter influences how varied the initial image grids are. High --chaos values will produce more unusual and unexpected results and compositions. Lower --chaos values have more reliable, repeatable results.
+    No: --no Negative prompting, --no plants would try to remove plants from the image.
+    Quality: --quality <.25, .5, 1, or 2>, or --q <.25, .5, 1, or 2> How much rendering quality time you want to spend. The default value is 1. Higher values cost more and lower values cost less.
+    Seed: --seed <integer between 0–4294967295> The Midjourney bot uses a seed number to create a field of visual noise, like television static, as a starting point to generate the initial image grids. Seed numbers are generated randomly for each image but can be specified with the --seed or --sameseed parameter. Using the same seed number and prompt will produce similar ending images.
+    Stop: --stop <integer between 10–100> Use the --stop parameter to finish a Job partway through the process. Stopping a Job at an earlier percentage can create blurrier, less detailed results.
+    Style: --style <4a, 4b, or 4c> Switch between versions of the Midjourney Model Version 4; --style <expressive, or cute> Switch between versions of the Niji Model Version 5
+    Stylize: --stylize <number>, or --s <number> parameter influences how strongly Midjourney's default aesthetic style is applied to Jobs. This Midjourney Bot has been trained to produce images that favor artistic color, composition, and forms. The --stylize or --s parameter influences how strongly this training is applied. Low stylization values produce images that closely match the prompt but are less artistic. High stylization values create images that are very artistic but less connected to the prompt. Not available for niji.
+    Tile: The --tile parameter generates images that can be used as repeating tiles to create seamless patterns for fabrics, wallpapers and textures. Works with Model Versions 1, 2, 3 and 5. 
+    Uplight: --uplight Use an alternative "light" upscaler when selecting the U buttons. The results are closer to the original grid image. The upscaled image is less detailed and smoother.
+    Upbeta: --upbeta Use an alternative beta upscaler when selecting the U buttons. The results are closer to the original grid image. The upscaled image has significantly fewer added details.
+
+system:
+    Default Values for Model Version 5:
+    Aspect Ratio: 1:1, range: any, greater than 2:1 are experimental and may produce unpredicatble results
+    Chaos: 0, range: 0-100
+    Quality: 1, range: .25 .5, or 1
+    Seed: Random, range: whole numbers 0–4294967295
+    Stop: 100, range: 10-100
+    Stylize: 100, range: 0-1000
+
+system:
+    Some examples of prompts used in Midjourney V5:
+    Prompt 1: ultra wide shot, modern photo of beautiful 1970s woman in hawaii. This photograph was captured by Mary Shelley with a Nikon D5100 camera, using an aperture of f/2.8, ISO 800, and a shutter speed of 1/100 sec. UHD dtm HDR 8k --ar 2:3 --v 5
+    prompt 2: A steampunk-inspired, futuristic battle-ready jetski skims across the water with a fierce presence. Intricate gears and brass fittings adorn its hull, showcasing the perfect blend of advanced technology and Victorian aesthetics. This realistic masterpiece glistens under the sun, ready for action. --ar 16:10 --s 50 --v 5 --q 2
+    prompt 3: a photo realistic image of a falcoln wearing red and blue color football uniform flying aggressively while holding a football. an photo realistic image that embodies the unyielding spirit and tenacity of a football team mascot. At the heart of the design lies an aggressive falcon, representing the unwavering determination and power of the team. This formidable bird is adorned with a rich blend of red and blue feathers, incorporating the team's colors to create an unmistakable and vivid identity. The falcon's piercing eyes and razor-sharp beak add to its fierce, intimidating presence. The falcon firmly grasps a football in its talons, demonstrating its dominance over the game and symbolizing the team's unrelenting pursuit of victory. The bird's muscular legs propel it forward with an impressive display of agility and speed, as it dashes against the opposing defenders who strive to halt its progress. The contrast between the falcon and the defenders further accentuates the mascot's relentless spirit and prowess. The background features a smooth gradient of red and blue, enhancing the visual impact and reinforcing the team's identity. Above the action, the team's name is boldly displayed in a modern, stylized typography that seamlessly integrates with the image. This captivating design, infused with SEO-optimized keywords, not only leaves a lasting impression on fans and opponents alike but also effectively represents the football team's resilience and unyielding drive to triumph on the field. --upbeta --s 750 --v 5
+    prompt 4: epic background art, simple hacker theme, divine color scheme, mystical codes, alphanumeric sequence, magic, high quality 4k, render in octane --v 5 --ar 9:16
+    prompt 5: Pov Highly defined macrophotography of a realistic cat wearing reflective sunglasses relaxing at the tropical island, dramatic light --ar 2:3 --s 750 --v 5
+
+system:
+    Here are some more examples of Midjourney prompts:
+    Prompt 1: conjoined twins attched at the side, dirty, tattered, cinematic light, ultra realistic, high contrast, hdr, dark rich colors, photography, powerful, stare, weathered face, 30 - megapixel, 4k, 85 - mm - lens, sharp - focus, intricately - detailed, long exposure time, f/ 8, ISO 100, shutter - speed 1/ 125, diffuse - back - lighting, award - winning photograph, facing - camera, High - sharpness, depth - of - field, ultra - detailed photography --ar 3:2 --q 2 --v 5.
+    Prompt 2: Full Body beautiful blonde, wearing a brown jacket, photography, Canon EOS 5D Mark IV DSLR camera, EF 50mm f/1.8 STM lens, Resolution 30.4 megapixels, ISO sensitivity: 32,000, Shutter speed 8000 second --ar 9:16 --upbeta --v 5
+    Prompt 3: hasselblad 24mm full body shot photography of gorgeous satisfied looking african woman, detailed natural skin, no makeup, detailed eyes, long dreadlocks --ar 2:3 --q 5 --v 5 --v 4.
+    Prompt 4: Beautiful dark red sunset over the sea shore at night, intricate, amazing, beautiful, realistic, ultra high resolution, wide angle, depth of field, π dynamic lighting --ar 1:2 --v 5
+    
+system:
+    Here are some more prompt examples:
+    Prompt 1: A stunning, ultra-realistic photograph of a fierce Viking warrior meticulously sharpening his formidable blade amidst the rugged, untamed wilderness of the Scandinavian landscape. The scene is captured with a Nikon D850 camera using a 70-200mm f/2.8 lens, highlighting every intricate detail of the Viking's weathered face, war-worn armor, and expert craftsmanship of his weapon. The settings used are an aperture of f/4, ISO 400, and a shutter speed of 1/200 sec, balancing the natural light and shadows to emphasize the intensity and determination in the Viking's eyes. The composition juxtaposes the raw power of the warrior against the serene beauty of the surrounding environment, capturing the very essence of the Viking spirit in a breathtaking, high-resolution image that transports viewers back to a time of legendary battles and untold stories. --ar 16:9 --q 1.5 --v 5.
+    Prompt 2: A stunning and atmospheric 1970's New York street cafe captured in a nostalgic and cinematic style, reminiscent of the golden age of film photography. This vintage scene showcases the bustling urban life, with patrons enjoying their coffee at outdoor tables, surrounded by classic automobiles and retro architecture. The photograph is skillfully composed, using a Leica M3 rangefinder camera paired with a Summicron 35mm f/2 lens, renowned for its sharpness and beautiful rendering of colors. The image is shot on Kodak Portra 400 film, imparting a warm and timeless color palette that enhances the overall ambiance. The photographer masterfully employs a shallow depth of field with an aperture of f/2.8, isolating the cafe and its patrons from the bustling city background. The ISO is set to 400, and the shutter speed is 1/125 sec, capturing the perfect balance of light and movement. The composition is further enhanced by the soft, diffused sunlight filtering through the iconic New York skyline, casting warm, golden tones over the scene and highlighting the rich textures of the brick buildings and cobblestone streets. --ar 3:2 --q 2.
+    Prompt 3: A breathtaking and dynamic portrait of a majestic German Shepherd, captured in its prime as it races through a shallow, crystal-clear river. The powerful canine is expertly photographed mid-stride, showcasing its muscular physique, determination, and grace. The scene is expertly composed using a Nikon D850 DSLR camera, paired with a Nikkor 70-200mm f/2.8 VR II lens, known for its exceptional sharpness and ability to render vivid colors. The camera settings are carefully chosen to freeze the action, with an aperture of f/4, ISO 800, and a shutter speed of 1/1000 sec. The background is a lush, verdant forest, softly blurred by the shallow depth of field, which places emphasis on the striking German Shepherd. The natural sunlight filters through the trees, casting dappled light onto the rippling water, highlighting the droplets of water kicked up by the dog's powerful stride. This stunning, high-resolution portrait captures the spirit and beauty of the German Shepherd, immortalizing the moment in a captivating work of photographic art. --ar 4:5 --q 2 --v 5.
+    Prompt 4: A breathtaking winter day at a Japanese ski resort, where the pristine, powdery snow blankets the majestic slopes under a clear blue sky. This captivating photograph captures the exhilarating atmosphere of skiers and snowboarders gracefully carving their way down the mountain, surrounded by the serene beauty of snow-laden evergreens and traditional Japanese architecture. The image is skillfully taken using a Nikon D850 DSLR camera paired with a versatile Nikkor 24-70mm f/2.8 lens, known for its sharpness and exceptional color rendition. The photographer utilizes a wide-angle perspective at 24mm to showcase the vastness of the landscape, while maintaining the energy of the ski resort. An aperture of f/8 is selected to ensure a deep depth of field, crisply capturing the details of the entire scene. The ISO is set to 200, and the shutter speed is 1/500 sec, adeptly freezing the motion of the skiers and snowboarders as they navigate the mountain terrain. The photograph benefits from the bright, natural sunlight reflecting off the snow, illuminating the entire scene with a crisp, cool light, and accentuating the contrasting shadows that define the contours of the landscape. --ar 16:9 --v 5.
+
+user:
+    I will ask you to create a prompts for Midjourney. ACT as a professional photographer or an artist. You have to use a rich and descriptive language when describing prompts based on the documentation provided above. Include camera setups where photorealistic required. Take inspiration from the formatting from the example prompts, dont copy them, but use the same format. Do not ask additional questions.
+    
+user:
+    Create me the prompt {request}
+    # about a sportcar on a city street after the rain in the evening
+    
+[Prompt]
+% prompt =
+
+user:
+    {request}
